@@ -11,14 +11,28 @@
 		EC0CBD4A2BFCE6AC009B44EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD492BFCE6AC009B44EB /* ContentView.swift */; };
 		EC0CBD4C2BFCE6AE009B44EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0CBD4B2BFCE6AE009B44EB /* Assets.xcassets */; };
 		EC0CBD4F2BFCE6AE009B44EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0CBD4E2BFCE6AE009B44EB /* Preview Assets.xcassets */; };
-		EC0CBD532BFCE6F2009B44EB /* HiderCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD3F2BFCA3EA009B44EB /* HiderCentralManager.swift */; };
+		EC0CBD532BFCE6F2009B44EB /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD3F2BFCA3EA009B44EB /* PeripheralManager.swift */; };
+		EC0CBD732C02DCBB009B44EB /* PanasDingin_Mac_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD722C02DCBB009B44EB /* PanasDingin_Mac_AppApp.swift */; };
+		EC0CBD752C02DCBB009B44EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD742C02DCBB009B44EB /* ContentView.swift */; };
+		EC0CBD772C02DCBC009B44EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0CBD762C02DCBC009B44EB /* Assets.xcassets */; };
+		EC0CBD7A2C02DCBC009B44EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0CBD792C02DCBC009B44EB /* Preview Assets.xcassets */; };
+		EC0CBD802C02DD0E009B44EB /* HiderPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD7F2C02DD0E009B44EB /* HiderPeripheralManager.swift */; };
+		EC0CBD822C033BF5009B44EB /* SeekerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD812C033BF4009B44EB /* SeekerView.swift */; };
+		EC0CBD842C033C22009B44EB /* HiderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD832C033C22009B44EB /* HiderView.swift */; };
+		EC0CBD902C037376009B44EB /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD8F2C037376009B44EB /* UUID.swift */; };
+		EC0CBD942C037C20009B44EB /* SeekerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD932C037C20009B44EB /* SeekerView.swift */; };
+		EC0CBD962C037C38009B44EB /* HiderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD952C037C38009B44EB /* HiderView.swift */; };
+		EC0CBD992C037C4A009B44EB /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD982C037C4A009B44EB /* UUID.swift */; };
+		EC0CBD9B2C037C62009B44EB /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CBD9A2C037C62009B44EB /* CentralManager.swift */; };
+		EC0CBDA52C039986009B44EB /* Lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC0CBDA42C039986009B44EB /* Lose.mp3 */; };
+		EC0CBDA72C039994009B44EB /* Lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC0CBDA62C039994009B44EB /* Lose.mp3 */; };
 		EC828BF82BF4BEEF009A4E89 /* PanasDingin Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC828BF72BF4BEEF009A4E89 /* PanasDingin Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EC828BFD2BF4BEEF009A4E89 /* PanasDinginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC828BFC2BF4BEEF009A4E89 /* PanasDinginApp.swift */; };
 		EC828BFF2BF4BEEF009A4E89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC828BFE2BF4BEEF009A4E89 /* ContentView.swift */; };
 		EC828C012BF4BEF0009A4E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC828C002BF4BEF0009A4E89 /* Assets.xcassets */; };
 		EC828C042BF4BEF0009A4E89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC828C032BF4BEF0009A4E89 /* Preview Assets.xcassets */; };
-		EC828C392BFB4702009A4E89 /* SeekerCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC828C382BFB4702009A4E89 /* SeekerCentralManager.swift */; };
-		EC828C3B2BFB473A009A4E89 /* HiderCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC828C3A2BFB473A009A4E89 /* HiderCentralManager.swift */; };
+		EC828C392BFB4702009A4E89 /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC828C382BFB4702009A4E89 /* CentralManager.swift */; };
+		EC828C3B2BFB473A009A4E89 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC828C3A2BFB473A009A4E89 /* PeripheralManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,24 +60,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EC0CBD3F2BFCA3EA009B44EB /* HiderCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiderCentralManager.swift; sourceTree = "<group>"; };
+		EC0CBD3F2BFCA3EA009B44EB /* PeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
 		EC0CBD452BFCE6AC009B44EB /* PanasDingin Phone App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PanasDingin Phone App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0CBD472BFCE6AC009B44EB /* PanasDingin_Phone_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanasDingin_Phone_AppApp.swift; sourceTree = "<group>"; };
 		EC0CBD492BFCE6AC009B44EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC0CBD4B2BFCE6AE009B44EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC0CBD4E2BFCE6AE009B44EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC0CBD702C02DCBB009B44EB /* PanasDingin Mac App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PanasDingin Mac App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0CBD722C02DCBB009B44EB /* PanasDingin_Mac_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanasDingin_Mac_AppApp.swift; sourceTree = "<group>"; };
+		EC0CBD742C02DCBB009B44EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC0CBD762C02DCBC009B44EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC0CBD792C02DCBC009B44EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC0CBD7B2C02DCBC009B44EB /* PanasDingin_Mac_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PanasDingin_Mac_App.entitlements; sourceTree = "<group>"; };
+		EC0CBD7F2C02DD0E009B44EB /* HiderPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiderPeripheralManager.swift; sourceTree = "<group>"; };
+		EC0CBD812C033BF4009B44EB /* SeekerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerView.swift; sourceTree = "<group>"; };
+		EC0CBD832C033C22009B44EB /* HiderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiderView.swift; sourceTree = "<group>"; };
+		EC0CBD8F2C037376009B44EB /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
+		EC0CBD932C037C20009B44EB /* SeekerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerView.swift; sourceTree = "<group>"; };
+		EC0CBD952C037C38009B44EB /* HiderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiderView.swift; sourceTree = "<group>"; };
+		EC0CBD982C037C4A009B44EB /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
+		EC0CBD9A2C037C62009B44EB /* CentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
+		EC0CBDA42C039986009B44EB /* Lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lose.mp3; sourceTree = "<group>"; };
+		EC0CBDA62C039994009B44EB /* Lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Lose.mp3; sourceTree = "<group>"; };
 		EC828BF12BF4BEEF009A4E89 /* PanasDingin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanasDingin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC828BF72BF4BEEF009A4E89 /* PanasDingin Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PanasDingin Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC828BFC2BF4BEEF009A4E89 /* PanasDinginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanasDinginApp.swift; sourceTree = "<group>"; };
 		EC828BFE2BF4BEEF009A4E89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EC828C002BF4BEF0009A4E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC828C032BF4BEF0009A4E89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EC828C382BFB4702009A4E89 /* SeekerCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerCentralManager.swift; sourceTree = "<group>"; };
-		EC828C3A2BFB473A009A4E89 /* HiderCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiderCentralManager.swift; sourceTree = "<group>"; };
+		EC828C382BFB4702009A4E89 /* CentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
+		EC828C3A2BFB473A009A4E89 /* PeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EC0CBD422BFCE6AC009B44EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0CBD6D2C02DCBB009B44EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,8 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				EC0CBD472BFCE6AC009B44EB /* PanasDingin_Phone_AppApp.swift */,
-				EC0CBD492BFCE6AC009B44EB /* ContentView.swift */,
-				EC0CBD3F2BFCA3EA009B44EB /* HiderCentralManager.swift */,
+				EC0CBD982C037C4A009B44EB /* UUID.swift */,
+				EC0CBD972C037C3D009B44EB /* View */,
+				EC0CBD9C2C037C6B009B44EB /* Bluetooth Manager */,
+				EC0CBDA12C039676009B44EB /* Assets */,
 				EC0CBD4B2BFCE6AE009B44EB /* Assets.xcassets */,
 				EC0CBD4D2BFCE6AE009B44EB /* Preview Content */,
 			);
@@ -100,11 +139,87 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EC0CBD712C02DCBB009B44EB /* PanasDingin Mac App */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CBD722C02DCBB009B44EB /* PanasDingin_Mac_AppApp.swift */,
+				EC0CBD742C02DCBB009B44EB /* ContentView.swift */,
+				EC0CBD7F2C02DD0E009B44EB /* HiderPeripheralManager.swift */,
+				EC0CBD762C02DCBC009B44EB /* Assets.xcassets */,
+				EC0CBD7B2C02DCBC009B44EB /* PanasDingin_Mac_App.entitlements */,
+				EC0CBD782C02DCBC009B44EB /* Preview Content */,
+			);
+			path = "PanasDingin Mac App";
+			sourceTree = "<group>";
+		};
+		EC0CBD782C02DCBC009B44EB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CBD792C02DCBC009B44EB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC0CBD852C033C29009B44EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC828BFE2BF4BEEF009A4E89 /* ContentView.swift */,
+				EC0CBD832C033C22009B44EB /* HiderView.swift */,
+				EC0CBD812C033BF4009B44EB /* SeekerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC0CBD862C0349E7009B44EB /* Bluetooth Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EC828C382BFB4702009A4E89 /* CentralManager.swift */,
+				EC828C3A2BFB473A009A4E89 /* PeripheralManager.swift */,
+			);
+			path = "Bluetooth Manager";
+			sourceTree = "<group>";
+		};
+		EC0CBD972C037C3D009B44EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CBD492BFCE6AC009B44EB /* ContentView.swift */,
+				EC0CBD952C037C38009B44EB /* HiderView.swift */,
+				EC0CBD932C037C20009B44EB /* SeekerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC0CBD9C2C037C6B009B44EB /* Bluetooth Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CBD9A2C037C62009B44EB /* CentralManager.swift */,
+				EC0CBD3F2BFCA3EA009B44EB /* PeripheralManager.swift */,
+			);
+			path = "Bluetooth Manager";
+			sourceTree = "<group>";
+		};
+		EC0CBD9E2C03960E009B44EB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CBDA42C039986009B44EB /* Lose.mp3 */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EC0CBDA12C039676009B44EB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CBDA62C039994009B44EB /* Lose.mp3 */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		EC828BEA2BF4BEEF009A4E89 = {
 			isa = PBXGroup;
 			children = (
 				EC828BFB2BF4BEEF009A4E89 /* PanasDingin Watch App */,
 				EC0CBD462BFCE6AC009B44EB /* PanasDingin Phone App */,
+				EC0CBD712C02DCBB009B44EB /* PanasDingin Mac App */,
 				EC828BF22BF4BEEF009A4E89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +230,7 @@
 				EC828BF12BF4BEEF009A4E89 /* PanasDingin.app */,
 				EC828BF72BF4BEEF009A4E89 /* PanasDingin Watch App.app */,
 				EC0CBD452BFCE6AC009B44EB /* PanasDingin Phone App.app */,
+				EC0CBD702C02DCBB009B44EB /* PanasDingin Mac App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,9 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				EC828BFC2BF4BEEF009A4E89 /* PanasDinginApp.swift */,
-				EC828BFE2BF4BEEF009A4E89 /* ContentView.swift */,
-				EC828C382BFB4702009A4E89 /* SeekerCentralManager.swift */,
-				EC828C3A2BFB473A009A4E89 /* HiderCentralManager.swift */,
+				EC0CBD8F2C037376009B44EB /* UUID.swift */,
+				EC0CBD852C033C29009B44EB /* View */,
+				EC0CBD862C0349E7009B44EB /* Bluetooth Manager */,
+				EC0CBD9E2C03960E009B44EB /* Assets */,
 				EC828C002BF4BEF0009A4E89 /* Assets.xcassets */,
 				EC828C022BF4BEF0009A4E89 /* Preview Content */,
 			);
@@ -158,6 +275,23 @@
 			name = "PanasDingin Phone App";
 			productName = "PanasDingin Phone App";
 			productReference = EC0CBD452BFCE6AC009B44EB /* PanasDingin Phone App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC0CBD6F2C02DCBB009B44EB /* PanasDingin Mac App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC0CBD7E2C02DCBC009B44EB /* Build configuration list for PBXNativeTarget "PanasDingin Mac App" */;
+			buildPhases = (
+				EC0CBD6C2C02DCBB009B44EB /* Sources */,
+				EC0CBD6D2C02DCBB009B44EB /* Frameworks */,
+				EC0CBD6E2C02DCBB009B44EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PanasDingin Mac App";
+			productName = "PanasDingin Mac App";
+			productReference = EC0CBD702C02DCBB009B44EB /* PanasDingin Mac App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EC828BF02BF4BEEF009A4E89 /* PanasDingin */ = {
@@ -207,6 +341,9 @@
 					EC0CBD442BFCE6AC009B44EB = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					EC0CBD6F2C02DCBB009B44EB = {
+						CreatedOnToolsVersion = 15.3;
+					};
 					EC828BF02BF4BEEF009A4E89 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -231,6 +368,7 @@
 				EC828BF02BF4BEEF009A4E89 /* PanasDingin */,
 				EC828BF62BF4BEEF009A4E89 /* PanasDingin Watch App */,
 				EC0CBD442BFCE6AC009B44EB /* PanasDingin Phone App */,
+				EC0CBD6F2C02DCBB009B44EB /* PanasDingin Mac App */,
 			);
 		};
 /* End PBXProject section */
@@ -241,7 +379,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC0CBD4F2BFCE6AE009B44EB /* Preview Assets.xcassets in Resources */,
+				EC0CBDA72C039994009B44EB /* Lose.mp3 in Resources */,
 				EC0CBD4C2BFCE6AE009B44EB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0CBD6E2C02DCBB009B44EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0CBD7A2C02DCBC009B44EB /* Preview Assets.xcassets in Resources */,
+				EC0CBD772C02DCBC009B44EB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC828C042BF4BEF0009A4E89 /* Preview Assets.xcassets in Resources */,
+				EC0CBDA52C039986009B44EB /* Lose.mp3 in Resources */,
 				EC828C012BF4BEF0009A4E89 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +417,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0CBD992C037C4A009B44EB /* UUID.swift in Sources */,
 				EC0CBD4A2BFCE6AC009B44EB /* ContentView.swift in Sources */,
 				EC0CBD482BFCE6AC009B44EB /* PanasDingin_Phone_AppApp.swift in Sources */,
-				EC0CBD532BFCE6F2009B44EB /* HiderCentralManager.swift in Sources */,
+				EC0CBD962C037C38009B44EB /* HiderView.swift in Sources */,
+				EC0CBD942C037C20009B44EB /* SeekerView.swift in Sources */,
+				EC0CBD532BFCE6F2009B44EB /* PeripheralManager.swift in Sources */,
+				EC0CBD9B2C037C62009B44EB /* CentralManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0CBD6C2C02DCBB009B44EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0CBD752C02DCBB009B44EB /* ContentView.swift in Sources */,
+				EC0CBD732C02DCBB009B44EB /* PanasDingin_Mac_AppApp.swift in Sources */,
+				EC0CBD802C02DD0E009B44EB /* HiderPeripheralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +441,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC828C3B2BFB473A009A4E89 /* HiderCentralManager.swift in Sources */,
-				EC828C392BFB4702009A4E89 /* SeekerCentralManager.swift in Sources */,
+				EC828C3B2BFB473A009A4E89 /* PeripheralManager.swift in Sources */,
+				EC0CBD842C033C22009B44EB /* HiderView.swift in Sources */,
+				EC828C392BFB4702009A4E89 /* CentralManager.swift in Sources */,
 				EC828BFF2BF4BEEF009A4E89 /* ContentView.swift in Sources */,
+				EC0CBD822C033BF5009B44EB /* SeekerView.swift in Sources */,
 				EC828BFD2BF4BEEF009A4E89 /* PanasDinginApp.swift in Sources */,
+				EC0CBD902C037376009B44EB /* UUID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +524,66 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC0CBD7C2C02DCBC009B44EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PanasDingin Mac App/PanasDingin_Mac_App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PanasDingin Mac App/Preview Content\"";
+				DEVELOPMENT_TEAM = X46RMJJG8Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Use bluetooth";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.team8-appleDev.PanasDingin-Mac-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EC0CBD7D2C02DCBC009B44EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "PanasDingin Mac App/PanasDingin_Mac_App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PanasDingin Mac App/Preview Content\"";
+				DEVELOPMENT_TEAM = X46RMJJG8Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Use bluetooth";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.team8-appleDev.PanasDingin-Mac-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -581,6 +807,15 @@
 			buildConfigurations = (
 				EC0CBD512BFCE6AE009B44EB /* Debug */,
 				EC0CBD522BFCE6AE009B44EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC0CBD7E2C02DCBC009B44EB /* Build configuration list for PBXNativeTarget "PanasDingin Mac App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC0CBD7C2C02DCBC009B44EB /* Debug */,
+				EC0CBD7D2C02DCBC009B44EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

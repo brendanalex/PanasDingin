@@ -1,8 +1,8 @@
 //
-//  HiderCentralManager.swift
-//  apptewssr
+//  HiderPeripherakManager.swift
+//  PanasDingin Mac App
 //
-//  Created by Brendan Alexander Soendjojo on 21/05/24.
+//  Created by Brendan Alexander Soendjojo on 26/05/24.
 //
 
 import CoreBluetooth
@@ -20,7 +20,7 @@ class HiderPeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDel
     }
     
     func startAdvertising() {
-        let uuid = CBUUID(string: "E8E10F08-6A49-4E37-8B2E-B14CFE8D90BC") // Replace with your generated UUID
+        let uuid = CBUUID(string: "11111111-1111-1111-1111-111111111111") // Replace with your generated UUID
         advertisedData = [CBAdvertisementDataLocalNameKey: "HiderBeacon", CBAdvertisementDataServiceUUIDsKey: [uuid]]
         peripheralManager?.startAdvertising(advertisedData)
     }
@@ -43,4 +43,5 @@ class HiderPeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDel
         }
     }
 }
+
 

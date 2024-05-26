@@ -1,26 +1,11 @@
 //
 //  ContentView.swift
-//  PanasDingin Phone App
+//  PanasDingin Mac App
 //
-//  Created by Brendan Alexander Soendjojo on 21/05/24.
+//  Created by Brendan Alexander Soendjojo on 26/05/24.
 //
 
 import SwiftUI
-
-//struct ContentView: View {
-//
-//    @StateObject private var seekerManager = SeekerCentralManager()
-//
-//    var body: some View {
-//        VStack {
-//            List(seekerManager.allPeri, id: \.identifier) { peri in
-//                Text("\(peri.identifier.uuidString)")
-//            }
-//
-//        }
-//        .padding()
-//    }
-//}
 
 struct ContentView: View {
     
@@ -41,3 +26,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
