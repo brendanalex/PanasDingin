@@ -10,37 +10,54 @@ import SwiftUI
 struct SeekerView: View {
     @StateObject private var seekerCentralManager = CentralManager()
     @StateObject private var seekerPeripheralManager = PeripheralManager()
+    private func gradientColor(for rssi: Int) -> [Color] {
+        // Map the RSSI value to a gradient color set
+        let rssiNormalized = max(min(rssi, -40), -100)
+        let ratio = CGFloat(rssiNormalized + 100) / 60.0
+        
+        let startColor = Color("Dark Blue").opacity(Double(1 - ratio))
+        let endColor = Color("Dark Red").opacity(Double(ratio))
+        
+        return [startColor, endColor]
+    }
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color("Dark Blue").opacity(0.7), Color("Dark Red").opacity(0.6)]), startPoint: .topTrailing, endPoint: .bottomLeading)
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: gradientColor(for: seekerCentralManager.rssiValue)), startPoint: .topTrailing, endPoint: .bottomLeading)
+                            .edgesIgnoringSafeArea(.all)
+            
             VStack {
+                
                 Text("Seeker")
                     .font(.headline)
+                
                 Spacer()
-                Text(seekerCentralManager.proximityText)
+                
+                Text(seekerCentralManager.proximityText.rawValue)
                     .font(.caption)
                     .padding()
+                
                 Spacer()
+                
                 Button(action: {
                     if seekerCentralManager.searching {
-                        seekerCentralManager.stopScanning()
-                        seekerPeripheralManager.stopAdvertising()
-                        seekerCentralManager.proximityText = "Press start if ready."
+                        self.seekerCentralManager.stopScanning()
+                        self.seekerPeripheralManager.stopAdvertising()
+                        self.seekerCentralManager.proximityText = .start
                     } else {
-                        seekerCentralManager.startScanning(role: .seeker)
-                        seekerPeripheralManager.startAdvertising(role: .seeker)
-                        seekerCentralManager.proximityText = "No one is nearby."
+                        self.seekerCentralManager.startScanning(role: .seeker)
+                        self.seekerPeripheralManager.startAdvertising(role: .seeker)
+                        self.seekerCentralManager.proximityText = .hiderFar
                     }
                 }) {
                     Text(seekerCentralManager.searching ? "Stop" : "Start")
                         .foregroundStyle(seekerCentralManager.searching ? .red : .white)
                 }.padding()
+                
             }.onDisappear {
                 if seekerCentralManager.searching {
-                    seekerCentralManager.stopScanning()
-                    seekerPeripheralManager.stopAdvertising()
+                    self.seekerCentralManager.stopScanning()
+                    self.seekerPeripheralManager.stopAdvertising()
                 }
         }
         }

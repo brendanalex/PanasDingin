@@ -5,7 +5,6 @@
 //  Created by Brendan Alexander Soendjojo on 26/05/24.
 //
 
-import Foundation
 import CoreBluetooth
 import AVFoundation
 
@@ -13,9 +12,11 @@ class CentralManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPe
     var centralManager: CBCentralManager?
     var peripheralManager: PeripheralManager?
     var currentRole: Role?
+    private var discoveredPeripherals: [UUID: CBPeripheral] = [:]
     private var lastRSSICheckTime: Date?
     var audioPlayer: AVAudioPlayer?
-    @Published var proximityText: String = "Press start if ready."
+    @Published var proximityText: ProximityType = .start
+    @Published var rssiValue: Int = -100
     @Published var searching: Bool = false
     
     override init() {
@@ -37,10 +38,10 @@ class CentralManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPe
         
         switch role{
         case .hider:
-            uuid = roleUUID.seeker
+            uuid = RoleUUID.seeker
             currentRole = .hider
         case .seeker:
-            uuid = roleUUID.hider
+            uuid = RoleUUID.hider
             currentRole = .seeker
         }
         
@@ -49,13 +50,35 @@ class CentralManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPe
     
     func stopScanning() {
         searching = false
-        centralManager?.stopScan()
+        cancelAllConnections()
+        discoveredPeripherals.removeAll()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.centralManager?.stopScan()
+        }
+    }
+    
+    func cancelAllConnections() {
+        for (_, peripheral) in discoveredPeripherals {
+            centralManager?.cancelPeripheralConnection(peripheral)
+        }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        peripheral.delegate = self
+        discoveredPeripherals[peripheral.identifier] = peripheral
+        centralManager?.connect(peripheral, options: nil)
         if shouldUpdateProximity(){
             handleProximity(RSSI: RSSI)
         }
+    }
+    
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        DispatchQueue.main.async {
+            if self.currentRole == .seeker {
+                self.proximityText = .hiderFar
+            }
+        }
+        discoveredPeripherals.removeValue(forKey: peripheral.identifier)
     }
     
     private func shouldUpdateProximity() -> Bool {
@@ -74,36 +97,30 @@ class CentralManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPe
     }
     
     func handleProximity(RSSI: NSNumber) {
-        let rssiValue = RSSI.intValue
-        var proximity: String?
+        self.rssiValue = RSSI.intValue
         
-        print(rssiValue)
-        
-        if currentRole == .hider {
-            switch rssiValue {
-            case let x where x >= -60:
-                proximity = "The seeker has found you!"
+        switch currentRole {
+        case .hider:
+            if rssiValue >= -50 {
+                self.proximityText = .seekerFound
                 playSound(fileName: "Lose", fileType: "mp3")
                 stopScanning()
                 peripheralManager?.stopAdvertising()
-            case let x where x >= -100:
-                proximity = "The seeker is approaching!"
-            default:
-                proximity = "The seeker is far away."
+            } else {
+                self.proximityText = .seekerNear
             }
-        } else if currentRole == .seeker {
-            switch rssiValue {
-            case let x where x >= -60:
-                proximity = "A hider has been found!"
-            case let x where x >= -100:
-                proximity = "A hider is nearby."
-            default:
-                proximity = "No one is nearby."
+        case .seeker:
+            if rssiValue >= -50 {
+                self.proximityText = .hiderFound
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                    self.rssiValue = -100
+                    self.proximityText = .hiderFar
+                }
+            } else {
+                self.proximityText = .hiderNear
             }
-        }
-        
-        DispatchQueue.main.async {
-            self.proximityText = proximity!
+        case .none:
+            print("Role is unassigned.")
         }
     }
     

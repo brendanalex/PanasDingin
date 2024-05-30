@@ -30,9 +30,9 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
         
         switch role{
         case .hider:
-            uuid = roleUUID.hider
+            uuid = RoleUUID.hider
         case .seeker:
-            uuid = roleUUID.seeker
+            uuid = RoleUUID.seeker
         }
         
         advertisedData = [CBAdvertisementDataLocalNameKey: "Beacon", CBAdvertisementDataServiceUUIDsKey: [uuid]]
@@ -40,7 +40,6 @@ class PeripheralManager: NSObject, ObservableObject, CBPeripheralManagerDelegate
     }
     
     func stopAdvertising() {
-        peripheralManager?.stopAdvertising()
+        self.peripheralManager?.stopAdvertising()
     }
 }
-

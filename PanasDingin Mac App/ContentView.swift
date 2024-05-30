@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  PanasDingin Mac App
 //
 //  Created by Brendan Alexander Soendjojo on 26/05/24.

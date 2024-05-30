@@ -10,6 +10,16 @@ import SwiftUI
 struct HiderView: View {
     @StateObject private var hiderCentralManager = CentralManager()
     @StateObject private var hiderPeripheralManager = PeripheralManager()
+    private func gradientColor(for rssi: Int) -> [Color] {
+        // Map the RSSI value to a gradient color set
+        let rssiNormalized = max(min(rssi, -30), -100)
+        let ratio = CGFloat(rssiNormalized + 100) / 70.0
+        
+        let startColor = Color("Dark Blue").opacity(Double(1 - ratio))
+        let endColor = Color("Dark Red").opacity(Double(ratio))
+        
+        return [startColor, endColor]
+    }
     
     var body: some View {
         VStack {
@@ -18,29 +28,29 @@ struct HiderView: View {
             
             Spacer()
             
-            Text(hiderCentralManager.proximityText)
+            Text(hiderCentralManager.proximityText.rawValue)
                 .font(.caption)
                 .padding()
             
             Spacer()
             
             Button(action: {
-                hiderCentralManager.peripheralManager = hiderPeripheralManager 
-                hiderCentralManager.startScanning(role: .hider)
-                hiderPeripheralManager.startAdvertising(role: .hider)
-                hiderCentralManager.proximityText = "Seeker is far away."
+                self.hiderCentralManager.peripheralManager = hiderPeripheralManager
+                self.hiderCentralManager.startScanning(role: .hider)
+                self.hiderPeripheralManager.startAdvertising(role: .hider)
+                self.hiderCentralManager.proximityText = .seekerFar
             }) {
                 Text("Start")
             }.disabled(hiderCentralManager.searching)
             .padding()
             
         }.background(
-            LinearGradient(gradient: Gradient(colors: [Color("Dark Blue").opacity(0.7), Color("Dark Red").opacity(0.6)]), startPoint: .topTrailing, endPoint: .bottomLeading)
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: gradientColor(for: hiderCentralManager.rssiValue)), startPoint: .topTrailing, endPoint: .bottomLeading)
+                            .edgesIgnoringSafeArea(.all)
         ).onDisappear {
             if hiderCentralManager.searching {
-                hiderCentralManager.stopScanning()
-                hiderPeripheralManager.stopAdvertising()
+                self.hiderCentralManager.stopScanning()
+                self.hiderPeripheralManager.stopAdvertising()
             }
         }
     }

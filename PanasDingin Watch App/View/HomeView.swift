@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  PanasDingin Watch App
 //
 //  Created by Brendan Alexander Soendjojo on 15/05/24.
@@ -8,45 +8,42 @@
 import CoreBluetooth
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
                 
-                Text("Panas Dingin")
-                    .font(.title2)
-                    .padding()
+                Text("Choose Your Role")
+                    .font(.title3).bold()
                 
                 Spacer()
                 
                 HStack {
-                    Image(systemName: "figure.arms.open")
+                    Image("hider")
                         .resizable()
                         .aspectRatio(contentMode:.fit)
-                        .frame(height: 40)
+                        .frame(height: 30)
                         .padding(.leading,10)
+                        .foregroundColor(.white)
                     NavigationLink(destination: HiderView()) {
-                        Text("Hide ")
-                            .font(.headline)
+                        Text("Hider")
+                            .font(.callout)
                     }
                     .padding(.horizontal)
                 }.padding(.bottom,5)
                 
                 HStack {
-                    Image(systemName: "figure.walk")
+                    Image("seeker")
                         .resizable()
                         .aspectRatio(contentMode:.fit)
-                        .frame(height: 40)
-                        .padding(.leading,10)
+                        .frame(height: 42)
+                        .padding(.leading,15)
                     NavigationLink(destination: SeekerView()) {
-                        Text("Seek ")
-                            .font(.headline)
-                    }
+                        Text("Seeker")
+                            .font(.callout)
+                    }.padding(.leading,9)
                     .padding(.horizontal)
                 }
-                
-                Spacer()
-                
             }.background(
                 LinearGradient(gradient: Gradient(colors: [Color("Dark Blue").opacity(0.7), Color("Dark Red").opacity(0.6)]), startPoint: .topTrailing, endPoint: .bottomLeading)
                     .edgesIgnoringSafeArea(.all)
@@ -56,5 +53,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
